@@ -16,23 +16,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fT-Qz-K8E">
-                                <rect key="frame" x="107" y="44" width="200" height="198.5"/>
+                                <rect key="frame" x="107" y="44" width="200" height="207.5"/>
                                 <color key="backgroundColor" red="0.91980725526809692" green="0.068749552409967579" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELU-nb-6oO">
-                                <rect key="frame" x="107" y="252.5" width="200" height="199"/>
+                                <rect key="frame" x="107" y="261.5" width="200" height="207"/>
                                 <color key="backgroundColor" red="0.91980725526809692" green="0.85033012177403633" blue="0.013272197059494235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h54-Ct-iRo">
-                                <rect key="frame" x="107" y="461.5" width="200" height="198.5"/>
+                                <rect key="frame" x="107" y="478.5" width="200" height="207.5"/>
                                 <color key="backgroundColor" red="0.01031441976987456" green="0.91980725529999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2G-cN-N7P">
-                                <rect key="frame" x="135" y="739" width="145" height="61"/>
+                                <rect key="frame" x="135" y="765" width="145" height="35"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="START">
-                                    <fontDescription key="titleFontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                    <fontDescription key="titleFontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JTq-k8-avR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,10 +64,16 @@
                             <constraint firstItem="ELU-nb-6oO" firstAttribute="top" secondItem="1fT-Qz-K8E" secondAttribute="bottom" constant="10" id="wF8-Tq-VSk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="n2G-cN-N7P" id="lgJ-1E-zpc"/>
+                        <outlet property="greenLightView" destination="h54-Ct-iRo" id="MOa-Xz-75q"/>
+                        <outlet property="redLightView" destination="1fT-Qz-K8E" id="FqF-8c-p27"/>
+                        <outlet property="yellowLightView" destination="ELU-nb-6oO" id="e1W-sw-GgQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="94"/>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
     </scenes>
 </document>
