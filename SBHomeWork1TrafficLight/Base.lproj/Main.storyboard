@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,59 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SBHomeWork1TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fT-Qz-K8E">
+                                <rect key="frame" x="107" y="44" width="200" height="198.5"/>
+                                <color key="backgroundColor" red="0.91980725526809692" green="0.068749552409967579" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELU-nb-6oO">
+                                <rect key="frame" x="107" y="252.5" width="200" height="199"/>
+                                <color key="backgroundColor" red="0.91980725526809692" green="0.85033012177403633" blue="0.013272197059494235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h54-Ct-iRo">
+                                <rect key="frame" x="107" y="461.5" width="200" height="198.5"/>
+                                <color key="backgroundColor" red="0.01031441976987456" green="0.91980725529999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2G-cN-N7P">
+                                <rect key="frame" x="135" y="739" width="145" height="61"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START">
+                                    <fontDescription key="titleFontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n2G-cN-N7P" secondAttribute="bottom" constant="62" id="5ce-Sh-Qx6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ELU-nb-6oO" secondAttribute="trailing" constant="107" id="83Y-up-wbh"/>
+                            <constraint firstItem="1fT-Qz-K8E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8lk-n2-WFm"/>
+                            <constraint firstItem="h54-Ct-iRo" firstAttribute="top" secondItem="ELU-nb-6oO" secondAttribute="bottom" constant="10" id="Anc-Vf-Lhd"/>
+                            <constraint firstItem="h54-Ct-iRo" firstAttribute="width" secondItem="1fT-Qz-K8E" secondAttribute="width" id="MO7-Zo-uMP"/>
+                            <constraint firstItem="h54-Ct-iRo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="PhG-BN-0NO"/>
+                            <constraint firstItem="n2G-cN-N7P" firstAttribute="top" secondItem="h54-Ct-iRo" secondAttribute="bottom" constant="79" id="SBq-lS-8AO"/>
+                            <constraint firstItem="ELU-nb-6oO" firstAttribute="top" secondItem="1fT-Qz-K8E" secondAttribute="bottom" constant="10" id="Sbt-nB-60R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1fT-Qz-K8E" secondAttribute="trailing" constant="107" id="SwX-fQ-CHs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h54-Ct-iRo" secondAttribute="trailing" constant="107" id="ZkV-o6-XSa"/>
+                            <constraint firstItem="1fT-Qz-K8E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="dir-Q0-YxV"/>
+                            <constraint firstItem="ELU-nb-6oO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="drD-l6-ZXv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n2G-cN-N7P" secondAttribute="trailing" constant="134" id="fKZ-ny-8Xt"/>
+                            <constraint firstItem="h54-Ct-iRo" firstAttribute="top" secondItem="ELU-nb-6oO" secondAttribute="bottom" constant="10" id="hsm-kZ-JFE"/>
+                            <constraint firstItem="ELU-nb-6oO" firstAttribute="width" secondItem="1fT-Qz-K8E" secondAttribute="width" id="jl8-5B-t6x"/>
+                            <constraint firstItem="ELU-nb-6oO" firstAttribute="height" secondItem="1fT-Qz-K8E" secondAttribute="height" id="k7A-PH-Ef1"/>
+                            <constraint firstItem="h54-Ct-iRo" firstAttribute="height" secondItem="1fT-Qz-K8E" secondAttribute="height" id="ln4-JU-ft9"/>
+                            <constraint firstItem="n2G-cN-N7P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="st9-Gf-f7p"/>
+                            <constraint firstItem="ELU-nb-6oO" firstAttribute="top" secondItem="1fT-Qz-K8E" secondAttribute="bottom" constant="10" id="wF8-Tq-VSk"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="35" y="94"/>
         </scene>
     </scenes>
 </document>
