@@ -16,11 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var actionButton: UIButton!
     
     override func viewDidLoad() {
-        redLightView.layer.cornerRadius = 100
         redLightView.alpha = 0.5
-        yellowLightView.layer.cornerRadius = 100
         yellowLightView.alpha = 0.5
-        greenLightView.layer.cornerRadius = 100
         greenLightView.alpha = 0.5
         
         actionButton.layer.cornerRadius = 10
@@ -28,6 +25,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        redLightView.layer.cornerRadius = redLightView.frame.size.height / 2
+        yellowLightView.layer.cornerRadius = yellowLightView.frame.size.height / 2
+        greenLightView.layer.cornerRadius = greenLightView.frame.size.height / 2
+    }
+    
+    
     @IBAction func actionButtonPressed(_ sender: Any) {
         actionButton.setTitle("NEXT", for: .normal)
         
